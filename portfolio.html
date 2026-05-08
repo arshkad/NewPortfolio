@@ -89,3 +89,35 @@ section{padding:80px 48px;max-width:900px;margin:0 auto;position:relative;z-inde
 .project-links{display:flex;gap:12px;margin-top:4px}
 .project-links a{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--muted);transition:color 0.15s}
 .project-links a:hover{color:var(--purple);text-decoration:none}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-text{font-size:15px;color:var(--muted);line-height:1.8;font-weight:300}
+.about-text p+p{margin-top:16px}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;box-shadow:0 1px 4px rgba(124,58,237,0.05);transition:all 0.2s;cursor:default}
+.stat-card:hover{transform:scale(1.04);box-shadow:0 8px 24px rgba(124,58,237,0.12);border-color:var(--purple)}
+.stat-num{font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:var(--purple);line-height:1}
+.stat-label{font-size:11px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.06em}
+
+/* CONTACT */
+.contact-inner{background:linear-gradient(135deg,#faf5ff 0%,#eff6ff 100%);border:1px solid var(--border);border-radius:12px;padding:40px;text-align:center;box-shadow:0 4px 24px rgba(124,58,237,0.08)}
+.contact-inner h3{font-size:22px;font-weight:300;color:var(--text);margin-bottom:8px}
+.contact-inner p{color:var(--muted);font-size:14px;margin-bottom:28px}
+.contact-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.contact-btn{font-family:'JetBrains Mono',monospace;font-size:13px;padding:10px 20px;border-radius:8px;border:1px solid var(--border2);color:var(--text);background:var(--surface);transition:all 0.2s;display:flex;align-items:center;gap:8px}
+.contact-btn:hover{border-color:var(--purple);color:var(--purple);transform:translateY(-2px);box-shadow:0 4px 12px rgba(124,58,237,0.15);text-decoration:none}
+
+/* DIVIDER */
+.divider{height:1px;background:var(--border);max-width:900px;margin:0 auto;position:relative;z-index:1}
+
+/* FOOTER */
+footer{text-align:center;padding:24px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);border-top:1px solid var(--border);position:relative;z-index:1}
+
+/* HERO ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-tag{animation:fadeUp 0.5s ease 0.1s both,pulse 2s ease 0.6s infinite}
+.hero h1{animation:fadeUp 0.5s ease 0.2s both}
+.hero-sub{animation:fadeUp 0.5s ease 0.3s both}
+.hero-btns{animation:fadeUp 0.5s ease 0.4s both}
+.terminal{animation:fadeUp 0.5s ease 0.5s both}
