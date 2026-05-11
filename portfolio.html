@@ -306,7 +306,7 @@ footer{text-align:center;padding:24px;font-family:'JetBrains Mono',monospace;fon
 <footer>built by arsha anvekar · 2026 · <span style="color:var(--purple)">open to work</span></footer>
 
 <script>
-  
+
   // FLOATING PARTICLES
   const canvas = document.getElementById('particles');
   const ctx = canvas.getContext('2d');
@@ -362,3 +362,36 @@ footer{text-align:center;padding:24px;font-family:'JetBrains Mono',monospace;fon
     requestAnimationFrame(animateParticles);
   }
   animateParticles();
+  // TYPING EFFECT IN TERMINAL
+const lines = [
+  '&nbsp;&nbsp;<span style="color:#4a6cf7">"role"</span><span style="color:#a8a0cc">:</span> <span style="color:#6d48e5">"Software Engineer"</span><span style="color:#a8a0cc">,</span>',
+  '&nbsp;&nbsp;<span style="color:#4a6cf7">"school"</span><span style="color:#a8a0cc">:</span> <span style="color:#6d48e5">"Cal State Fullerton"</span><span style="color:#a8a0cc">,</span>',
+  '&nbsp;&nbsp;<span style="color:#4a6cf7">"graduated"</span><span style="color:#a8a0cc">:</span> <span style="color:#6d48e5">"May 2026"</span><span style="color:#a8a0cc">,</span>',
+  '&nbsp;&nbsp;<span style="color:#4a6cf7">"status"</span><span style="color:#a8a0cc">:</span> <span style="color:#7c3aed">"open to work"</span>',
+];
+const termContent = document.getElementById('term-content');
+let lineIndex = 0;
+
+function typeLine() {
+  if (lineIndex < lines.length) {
+    const div = document.createElement('div');
+    div.innerHTML = lines[lineIndex];
+    div.style.opacity = '0';
+    div.style.transform = 'translateX(-8px)';
+    div.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    termContent.appendChild(div);
+    setTimeout(() => { div.style.opacity = '1'; div.style.transform = 'translateX(0)'; }, 50);
+    lineIndex++;
+    setTimeout(typeLine, 300);
+  } else {
+    const closing = document.createElement('div');
+    closing.innerHTML = '<span style="color:#a8a0cc">}</span>';
+    closing.style.opacity = '0';
+    closing.style.transition = 'opacity 0.3s ease';
+    termContent.appendChild(closing);
+    setTimeout(() => { closing.style.opacity = '1'; }, 50);
+  }
+}
+setTimeout(typeLine, 800);
+
+
