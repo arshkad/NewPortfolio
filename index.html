@@ -180,3 +180,18 @@ marquee { display: block; }
   animation: shine 3s ease-in-out infinite;
 }
 @keyframes shine { 0%,100%{transform:translateX(-100%) rotate(45deg)} 50%{transform:translateX(100%) rotate(45deg)} }
+
+/* STATUS */
+.online-status {
+  display: flex; align-items: center; gap: 6px;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 11px; color: #00ff88;
+  justify-content: center; margin-bottom: 4px;
+}
+.green-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 6px #00ff88;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
