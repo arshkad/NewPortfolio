@@ -54,3 +54,69 @@ marquee { display: block; }
   padding: 10px;
   position: relative; z-index: 1;
 } 
+
+/* PROFILE HEADER */
+.profile-header {
+  background: linear-gradient(135deg, #cc00cc, #6600cc, #0000cc);
+  border: 3px solid #ff00ff;
+  border-radius: 0;
+  padding: 16px;
+  margin-bottom: 8px;
+  text-align: center;
+  box-shadow: 0 0 20px #ff00ff, inset 0 0 20px rgba(255,0,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.profile-header::before {
+  content: '✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨';
+  display: block;
+  font-size: 11px;
+  color: #ffff00;
+  margin-bottom: 8px;
+  animation: rainbow 2s linear infinite;
+}
+.profile-header::after {
+  content: '✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨ ★ ✨';
+  display: block;
+  font-size: 11px;
+  color: #ffff00;
+  margin-top: 8px;
+  animation: rainbow 2s linear infinite reverse;
+}
+@keyframes rainbow {
+  0% { color: #ff0000; } 16% { color: #ff8800; } 33% { color: #ffff00; }
+  50% { color: #00ff00; } 66% { color: #00ffff; } 83% { color: #8800ff; } 100% { color: #ff0000; }
+}
+
+.profile-name {
+  font-family: 'Paprika', cursive;
+  font-size: 42px;
+  background: linear-gradient(90deg, #ff00ff, #ffff00, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200%;
+  animation: shimmer 3s linear infinite;
+  text-shadow: none;
+  filter: drop-shadow(0 0 10px #ff00ff);
+}
+@keyframes shimmer { 0% { background-position: 0% } 100% { background-position: 200% } }
+
+.profile-tagline {
+  font-family: 'Comic Sans MS', cursive;
+  color: #ffff00;
+  font-size: 14px;
+  margin: 4px 0;
+}
+.profile-tagline .blink {
+  animation: blink 0.8s step-end infinite;
+  color: #ff99ff;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.mood-section {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 12px;
+  color: #ccffcc;
+  margin-top: 8px;
+}
