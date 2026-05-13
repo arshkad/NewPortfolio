@@ -120,3 +120,38 @@ marquee { display: block; }
   color: #ccffcc;
   margin-top: 8px;
 }
+
+/* MAIN GRID */
+.main-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 8px;
+}
+
+/* LEFT COLUMN */
+.left-col { display: flex; flex-direction: column; gap: 8px; }
+
+/* BOXES */
+.box {
+  background: linear-gradient(180deg, #1a0033 0%, #0d001a 100%);
+  border: 2px solid #ff00ff;
+  padding: 0;
+  box-shadow: 0 0 8px #cc00cc;
+}
+.box-header {
+  background: linear-gradient(90deg, #cc00cc, #6600aa);
+  padding: 4px 8px;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000, 0 0 6px #fff;
+  border-bottom: 1px solid #ff00ff;
+}
+.box-content {
+  padding: 10px;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #ddccff;
+}
