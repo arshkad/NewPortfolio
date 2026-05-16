@@ -335,3 +335,30 @@ marquee { display: block; }
   transform: scale(1.05);
 }
 
+/* TOP FRIENDS */
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.friend-card {
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 10px;
+}
+.friend-avatar {
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, #330066, #003366);
+  border: 2px solid #ff00ff;
+  margin: 0 auto 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  transition: all 0.2s;
+}
+.friend-avatar:hover {
+  box-shadow: 0 0 12px #ff00ff;
+  transform: scale(1.05);
+}
+.friend-name { color: #00ffff; font-size: 11px; }
+.friend-name a { color: #00ffff; text-decoration: underline; }
+.friend-name a:hover { color: #ffff00; }
