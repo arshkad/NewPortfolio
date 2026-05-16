@@ -425,3 +425,29 @@ marquee { display: block; }
   background: linear-gradient(90deg, transparent, #330033, transparent);
   padding: 3px;
 }
+
+/* SPARKLE DECORATION */
+.sparkle {
+  display: inline-block;
+  animation: spin 3s linear infinite;
+  font-size: 14px;
+}
+@keyframes spin { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #000033; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #cc00cc, #6600cc); border: 1px solid #ff00ff; }
+</style>
+</head>
+<body>
+
+<!-- STARS -->
+<div class="stars" id="stars"></div>
+
+<!-- TOP MARQUEE -->
+<div class="marquee-bar">
+  <marquee behavior="scroll" direction="left" scrollamount="4">
+    🌟 WELCOME TO ARSHA'S PROFILE PAGE 🌟 &nbsp;&nbsp;&nbsp; 💻 SOFTWARE ENGINEER &nbsp;&nbsp;&nbsp; 🎓 CAL STATE FULLERTON CLASS OF 2026 &nbsp;&nbsp;&nbsp; ✨ OPEN TO WORK ✨ &nbsp;&nbsp;&nbsp; 🚀 BUILDING COOL STUFF SINCE FOREVER &nbsp;&nbsp;&nbsp; 💜 PYTHON • REACT • NODE.JS • AI 💜 &nbsp;&nbsp;&nbsp; 🌟 WELCOME TO ARSHA'S PROFILE PAGE 🌟
+  </marquee>
+</div>
