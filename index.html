@@ -375,5 +375,30 @@ marquee { display: block; }
   border-bottom: 1px dotted #330033;
 }
 .stats-table .label { color: #ff99ff; width: 110px; }
-.stats-table .value { color: #ffff00; }
+.stats-table .value { color: #ffff00; }/* CONTACT TABLE */
+.contact-table {
+  width: 100%;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 12px;
+}
+.contact-table td { padding: 5px; }
+.contact-btn-old {
+  display: block;
+  background: linear-gradient(180deg, #6600cc, #440088);
+  border: 2px outset #9933ff;
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  text-decoration: none;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.1s;
+  white-space: nowrap;
+}
+.contact-btn-old:hover {
+  background: linear-gradient(180deg, #9900ff, #6600cc);
+  border-style: inset;
+}
+.contact-btn-old::before { content: '📨 '; }
 
