@@ -314,4 +314,24 @@ marquee { display: block; }
   margin-left: 4px;
   animation: blink 1.5s step-end infinite;
 }
+/* SKILLS */
+.skills-section {
+  display: flex; flex-wrap: wrap; gap: 5px;
+}
+.skill-badge {
+  background: linear-gradient(135deg, #440066, #220044);
+  border: 1px solid #cc00ff;
+  color: #ff99ff;
+  padding: 3px 10px;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 11px;
+  display: inline-block;
+  transition: all 0.15s;
+}
+.skill-badge:hover {
+  background: linear-gradient(135deg, #cc00ff, #8800cc);
+  color: #fff;
+  box-shadow: 0 0 8px #cc00ff;
+  transform: scale(1.05);
+}
 
